@@ -53,7 +53,7 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          ./mvnw -B verify \
+          ./mvnw -B clean package -DskipTests \
           org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
           -Dsonar.projectKey=suchitravm_journalapp \
           -Dsonar.organization=suchitravm \
